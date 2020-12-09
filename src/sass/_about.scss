@@ -1,0 +1,121 @@
+.heading{
+    height: 355px;
+    padding-top: 115px;
+    max-width: 1600px;
+    background: url(../img/about/layers.png) center (center/cover) no-repeat;
+    margin: 0 auto;
+        .heading__marker{
+            width: 590px;
+            height: 60px;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h1{
+                color: #fff;
+                font-size: 48px;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                letter-spacing: 6px;
+            }
+        }
+        h2{
+            color: #000;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            letter-spacing: 6px;
+            margin-top: 45px;
+        }
+}
+
+.story{
+    min-height: 720px;
+    padding: 70px 0 50px 0;
+    background-color: #FAFAFA;
+    &__info{
+        display: flex;
+    }
+    &__text{
+        margin-left: 55px;
+        h3{
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.4em;
+            color: #000000;
+        }
+        p{
+            font-size: 14px;
+            line-height: 30px;
+            font-weight: 400;
+            letter-spacing: 0.025em;
+            color: #777777;
+        }
+        .our-skill{
+            margin-top: 42px;
+        }
+        hr{
+            margin-top: 43px;
+        }
+    }
+}
+
+.team{
+    min-height: 960px;
+    padding: 50px 0 105px 0;
+    background-color: #FAFAFA;
+    &__title{
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 30px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 0.4em;
+        color: #000000;
+    }
+    &__descr{
+        margin: 30px auto 0 auto;
+        text-align: center;
+        width: 595px;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #777777;
+    }
+    .workers{
+        margin-top: 65px;
+        display: flex;
+        justify-content: space-between;
+        .worker{
+            width: 358px;
+            padding: 35px 56px 30px 35px;
+            background-color: #fff;
+            &-name{
+                font-family: 'Roboto', sans-serif;
+                font-size: 24px;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 0.04em;
+                color: #041608;
+            }
+            &-prof{
+                margin-top: 5px;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 0.025em;
+                color: #777777;
+            }
+            &-statament{
+                margin-top: 18px;
+                font-size: 14px;
+                font-weight: 400;
+                color: #9c9c9c;
+            }
+        }
+    }
+}

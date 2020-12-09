@@ -1,0 +1,9 @@
+@mixin input() {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.025em;
+    color: #bababa;
+    outline: none;
+}
