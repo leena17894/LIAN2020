@@ -1,0 +1,83 @@
+.heading-blog{
+    @include heading();
+    background: url(../img/blog/bgc_blog.png) center (center/cover) no-repeat;
+}
+.sub-container{
+    width: 945px;
+    margin: 0 auto;
+    height: 2px;
+}
+
+.product-info{
+    min-height: 1550px;
+    background-color: #FAFAFA;
+    padding: 70px 0 85px 0;
+    h2{
+        text-align: center;
+    }
+    img{
+        margin-top: 25px;
+    }
+    .product-info__text{
+        margin-top: 50px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #777777;
+        h3{
+            font-size: 16px;
+            line-height: 36px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #333333;
+        }
+    }
+    .product-info__additional-text{
+        width: 942px;
+        height: 130px;
+        border: 1px solid #e1e1e1;
+        border-left: 5px solid #C8C8C8;
+        margin-top: 32px;
+        padding: 23px 31px 29px 42px;
+        font-family: 'PT Serif', serif;
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 700;
+        font-style: italic;
+        color: #777777;
+    }
+}
+
+.feedback{
+    min-height: 390px;
+    background-color: #FAFAFA;
+    padding-bottom: 85px;
+    h2{
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        line-height: 60px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #000000;
+    }
+    .message{
+        @include message-form();
+        width: 810px;
+        input{
+            width: 31%;
+        }
+        #web{
+            @include input-par();
+            @include input();
+        }
+        .sendMsg_single-page{
+            margin: 0 auto;
+            margin-top: 24px;
+            width: 195px;
+        }
+    }
+}

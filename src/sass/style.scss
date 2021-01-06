@@ -4,9 +4,12 @@
     padding: 0;
 }
 
-html, body{
+html,body{
     height: 100%;
     min-width: 100%;
+    // color: #505050;
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
 }
 
 body{
@@ -22,11 +25,13 @@ body{
 
 @import "mixins";
 @import "header";
+@import "slider";
 @import "footer";
 @import "home";
 @import "about";
 @import "portfolio";
 @import "blog";
+@import "single-page";
 @import "contacts";
 
 

@@ -1,46 +1,132 @@
 .slider{
-    height: 653px;
-    margin: 0  auto;
-    .slider_1{
-        background: url(../img/bgnd_home.png) center (center/cover) no-repeat;
-        height: inherit;
+    max-height: 653px;
+    margin: 0 auto;
+    position: relative;
+    .prev{
+        position: absolute; 
+        top: 50%;
+        transform: translateY(-50%);
+        left: 120px;
+        width: 42px;
+        height: 42px;
+        border-radius: 100%;
+        border: 1px solid #ffffff;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+        &:active{
+            background-color: #000000;
+        }
+        span{
+            color: #fff;
+            font-size: 23px;
+        }
+    }
+    .next{
+        width: 42px;
+        height: 42px;
+        border-radius: 100%;
+        border: 1px solid #ffffff;
+        background-color: transparent;
+        position: absolute; 
+        top: 50%;
+        transform: translateY(-50%);
+        right: 120px;
+        outline: none;
+        z-index: 4;
+        cursor: pointer;
+        &:active{
+            background-color: #000000;
+            border: none;
+        }
+        span{
+            color: #fff;
+            font-size: 23px;
+        }
+    }
+    button{
+        border: none;
+    }
+    .sliders{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .tns-nav{
+        position: absolute;
+        top: 90%;
+        transform: translateY(-50%);
+        z-index: 3;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+        button{
+            width: 15px;
+            height: 15px;
+            background-color: #ffffff;
+            border-radius: 100%;
+            outline: none;
+            &:focus{
+                border: 4px solid #000000;
+                border-radius: 100%;
+                
+            }
+        }
+    }
+    
+    .slider_1, .slider_2, .slider_3 {
+        height: 650px;
         display: flex;
         justify-content: center;
         align-items: center;
-        .slider__text{
-            .marker{
-                width: 700px;
-                height: 60px;
-                background-color: #000;
-                h1{
-                    color: #FFFFFF;
-                    font-size: 48px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-family: 'Roboto', sans-serif;
-                    font-weight: 300;
-                    text-transform: uppercase;
-                    letter-spacing: 6px;
-                }
-            }
-            h2{
-                margin-top: 38px;
-                text-align: center;
+        img{
+            display: flex;
+            margin: 0 auto;
+            z-index: 2;
+            position: absolute;
+            width: 100vw;
+            
+            
+            
+        }
+    }
+    .slider__text{
+        margin: 0 auto;
+        width: 612px;
+        height: 100px;
+        margin-top: 273px;
+        position: relative;
+        z-index: 3;
+        .marker{
+            width: 700px;
+            height: 60px;
+            background-color: #000;
+            h1{
+                color: #FFFFFF;
+                font-size: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 font-family: 'Roboto', sans-serif;
                 font-weight: 300;
                 text-transform: uppercase;
-                font-size: 18px;
-                letter-spacing: 8px;
+                letter-spacing: 6px;
             }
         }
-        
-    }
-    .slider_2, .slider_3{
-        display: none;
+        h2{
+            margin-left: 120px;
+            margin-top: 38px;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 18px;
+            letter-spacing: 8px;
+        }
     }
 }
-
 .line{
     background-color: #D7D7D7;
     height: 2px;
@@ -149,6 +235,7 @@
         display: block;
         cursor: pointer;
         transition: .3s;
+        outline: none;
         &:hover{
             background-color: #696969;
         }

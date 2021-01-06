@@ -1,34 +1,6 @@
-.heading{
-    height: 355px;
-    padding-top: 115px;
-    max-width: 1600px;
+.heading-contacts{
+    @include heading();
     background: url(../img/contacts/bgd_contacts.png) center (center/cover) no-repeat;
-    margin: 0 auto;
-        .heading__marker{
-            width: 590px;
-            height: 60px;
-            background-color: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            h1{
-                color: #fff;
-                font-size: 48px;
-                text-transform: uppercase;
-                font-family: 'Roboto', sans-serif;
-                font-weight: 300;
-                letter-spacing: 6px;
-            }
-        }
-        h2{
-            color: #000;
-            font-size: 18px;
-            text-transform: uppercase;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 300;
-            letter-spacing: 6px;
-            margin-top: 45px;
-        }
 }
 
 .info{
@@ -86,51 +58,9 @@
             }
         }
         .message{
-            display: flex;
-            flex-wrap: wrap;
-            width: 750px;
-            margin-left: 70px;
-            justify-content: space-between;
-            #name{
-                width: 358px;
-                height: 40px;
-                border: 1px solid #ebebeb;
-                padding-left: 12px;
-                @include input();
-            }
-            #email{
-                width: 358px;
-                height: 40px;
-                border: 1px solid #ebebeb;
-                padding-left: 12px;
-                @include input();
-            }
-            #message{
-                width: 100%;
-                margin-top: 30px;
-                width: 748px;
-                height: 150px;
-                border: 1px solid #ebebeb;
-                padding-left: 12px;
-                padding-top: 12px;
-                resize: none;
-                @include input();
-            }
-            .sendMsg{
-                margin-top: 30px;
-                margin-top: 12px;
-                width: 218px;
-                height: 39px;
-                background-color: #000000;
-                font-family: 'Roboto', sans-serif;
-                font-size: 14px;
-                font-weight: 700;
-                text-transform: uppercase;
-                letter-spacing: 0.05em;
-                color: #ffffff;
-                &:focus{
-                    outline: none;
-                }
+            @include message-form();
+            input{
+                width: 360px;
             }
         }
     }

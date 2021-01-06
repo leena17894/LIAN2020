@@ -1,0 +1,4 @@
+.heading-portfolio{
+    @include heading();
+    background: url(../img/portfolio/bgnd__portfolio.png) center (center/cover) no-repeat;
+}

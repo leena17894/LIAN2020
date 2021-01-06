@@ -1,39 +1,295 @@
-.heading{
-    height: 355px;
-    padding-top: 115px;
-    max-width: 1600px;
+.heading-blog{
+    @include heading();
     background: url(../img/blog/bgc_blog.png) center (center/cover) no-repeat;
-    margin: 0 auto;
-        .heading__marker{
-            width: 590px;
-            height: 60px;
-            background-color: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            h1{
-                color: #fff;
-                font-size: 48px;
-                text-transform: uppercase;
-                font-family: 'Roboto', sans-serif;
-                font-weight: 300;
-                letter-spacing: 6px;
-            }
-        }
-        h2{
-            color: #000;
-            font-size: 18px;
-            text-transform: uppercase;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 300;
-            letter-spacing: 6px;
-            margin-top: 45px;
-        }
 }
 
-.blog-info{
+.info{
     min-height: 1680px;
     background-color: #FAFAFA;
+    padding: 68px 0 100px 0;
+    .info__item{
+        margin-top: 30px;
+        width: inherit;
+        img{
+            height: 250px;
+        }
+        &-text{
+            padding: 30px 30px 40px 44px;
+            background-color: #fff;
+            h3{
+                font-family: 'Roboto', sans-serif;
+                font-size: 20px;
+                line-height: 30px;
+                font-weight: 600;
+                color: #333333;
+            }
+            .user{
+                @include user();
+            }
+            p{
+                @include p-portfolio();
+                margin-top: 12px;
+            }
+            .mt35{
+                margin-top: 35px;
+            }
+            .date{
+                @include date();
+            }.actions{
+                @include actions();
+            }
+        }
+        &_no-img{
+            padding: 40px 32px 35px 45px;
+            background-color: #fff;
+            .wordpress{
+                width: 110px;
+                height: 26px;
+                background-color: #000000;
+                font-family: 'Roboto', sans-serif;
+                font-size: 13px;
+                line-height: 25px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #ffffff;
+                text-align: center;
+            }
+            h3{
+                margin-top: 20px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 20px;
+                line-height: 30px;
+                font-weight: 700;
+                color: #333333;
+            }
+            .user{
+                @include user();
+            }
+            p{
+                @include p-portfolio();
+                margin-top: 30px;
+            }
+            .date{
+                @include date();
+            }.actions{
+                @include actions();
+            }
+        }
+    }
+    .clock{
+        width: 100%;
+        img{
+            object-position: -85px;
+            height: 250px;
+        }
+    }
+    .info__black-block{
+        margin-top: 30px;
+        width: 360px;
+        height: 330px;
+        padding: 40px 40px 40px 45px;
+        position: relative;
+        img{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .overlay{
+            width: 360px;
+            height: 330px;
+            background-color: rgba(0, 0, 0, .85);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+        .text-block{
+            position: absolute;
+            z-index: 3;
+            width: 275px;
+            .image-hover{
+                width: 110px;
+                height: 26px;
+                background-color: #000000;
+                font-family: 'Roboto', sans-serif;
+                font-size: 13px;
+                line-height: 25px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #ffffff;
+                text-align: center;
+            }
+            h3{
+                margin-top: 25px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                color: #ffffff;
+            }
+            .user{
+                @include user();
+            }
+            p{
+                margin-top: 28px;
+                color: #e5e5e5;
+                font-size: 13px;
+                line-height: 24px;
+                color: #e5e5e5;
+                font-family: 'Roboto', sans-serif;
+            }
+            .date{
+                @include date();
+                margin-top: 33px;
+            }.actions{
+                @include actions();
+                margin-top: 33px;
+            }
+        }
+    }
+    .video{
+        margin-top: 33px;
+    }
+    .search {
+        background: #FFFFFF;
+        position: relative;
+        input,  button {
+            border: none;
+            outline: none;
+            border-radius: 3px;
+            }
+             input {
+            width: 100%;
+            height: 60px;
+            background: #FFFFFF;
+            padding-left: 15px;
+            }
+             button {
+            width: 35px;
+            height: 34px;
+            position: absolute;
+            top: 12px;
+            right: 11px;
+            background: #999999;
+            cursor: pointer;
+            i{
+                font-size: 16px;
+                color: #fff;
+            }
+        }
+    }
+    .resent-post, .popular-post, .instagram, .search{
+        margin-bottom: 25px;
+    }
+    .resent-post{
+        min-height: 430px;
+        &__header{
+            background-color: #EBEBEB;
+            height: 40px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            line-height: 42px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.4em;
+            color: #000000;
+            text-align: center;
+        }
+        &__items{
+            margin-top: 25px;
+            margin-left: 25px;
+            .post{
+                margin-bottom: 25px;
+                img{
+                    width: 90px;
+                    height: 65px;
+                    float: left;
+                    margin-right: 17px;
+                }
+                .post-desr{
+                    margin-left: 17px;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 600;
+                    color: #3d3d3d;
+                }
+                .post-date{
+                    margin-top: 10px;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 13px;
+                    font-weight: 400;
+                    color: #777777;
+                }
+            }
+        }
+    }
+    .popular-post{
+        min-height: 215px;
+        padding-bottom: 30px;
+        background-color: #fff;
+        &__header{
+            background-color: #EBEBEB;
+            height: 40px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            line-height: 42px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.4em;
+            color: #000000;
+            text-align: center;
+        }
+        .tags{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 35px;
+            margin-left: 20px;
+            .tag{
+                padding: 10px 17px;
+                margin-right: 5px;
+                margin-bottom: 12px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 13px;
+                font-weight: 400;
+                color: #9c9c9c;
+                border: 1px solid #eeeeee;
+                transition: .8s;
+                cursor: pointer;
+                &:hover{
+                    background-color: #000000;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+    .instagram{
+        min-height: 350px;
+        &__header{
+            background-color: #EBEBEB;
+            height: 40px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            line-height: 42px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.4em;
+            color: #000000;
+            text-align: center;
+        }
+        &__images{
+            margin-top: 35px;
+            margin-left: 27px;
+            display: flex;
+            flex-wrap: wrap;
+            img{
+                margin-right: 5px;
+                margin-bottom: 5px;
+                cursor: pointer;
+            }
+        }
+    }
     .more-btn{
         width: 130px;
         padding: 10px 0;

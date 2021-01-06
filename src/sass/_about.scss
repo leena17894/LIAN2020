@@ -1,34 +1,6 @@
-.heading{
-    height: 355px;
-    padding-top: 115px;
-    max-width: 1600px;
-    background: url(../img/about/layers.png) center (center/cover) no-repeat;
-    margin: 0 auto;
-        .heading__marker{
-            width: 590px;
-            height: 60px;
-            background-color: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            h1{
-                color: #fff;
-                font-size: 48px;
-                text-transform: uppercase;
-                font-family: 'Roboto', sans-serif;
-                font-weight: 300;
-                letter-spacing: 6px;
-            }
-        }
-        h2{
-            color: #000;
-            font-size: 18px;
-            text-transform: uppercase;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 300;
-            letter-spacing: 6px;
-            margin-top: 45px;
-        }
+.heading-about{
+    @include heading();
+    background: url(../img/about/bgnd__about.png.png) center (center/cover) no-repeat;
 }
 
 .story{
