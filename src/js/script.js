@@ -6,9 +6,9 @@
 //     });
 
 $(document).ready(function(){
-  $('a.link').on('click', function(){
-    $(this)
-    .addClass('link_active').siblings().removeClass('link_active');
+  $('a.link').on('click', function(e){
+     e.preventDefault();
+    $(this).addClass('link_active').siblings().removeClass('link_active');
   });
 });
 
